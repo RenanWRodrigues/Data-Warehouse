@@ -135,3 +135,61 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m15:19:34.467840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000290E2EE2030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000290E2CF74D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000290E2F7D730>]}
 [0m15:19:34.467840 [debug] [MainThread]: Flushing usage events
 [0m15:19:35.460209 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:56:39.716753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249A6C77E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249AA5CB680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249AA302EA0>]}
+
+
+============================== 19:56:39.723949 | f6f53423-44b5-49ad-b61c-50d417f3b5ac ==============================
+[0m19:56:39.723949 [info ] [MainThread]: Running with dbt=1.11.9
+[0m19:56:39.725080 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\renan\\Desktop\\Projetos-Github\\Data-Warehouse', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:56:39.726096 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\renan\Desktop\Projetos-Github\Data-Warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:56:39.727091 [debug] [MainThread]: Command `dbt run` failed at 19:56:39.727091 after 0.27 seconds
+[0m19:56:39.727091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249ABBABCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249ABBB8AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000249A6C77E00>]}
+[0m19:56:39.728093 [debug] [MainThread]: Flushing usage events
+[0m19:56:40.672455 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:01:03.340565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239B3047110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239B2EB9940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239B33D80E0>]}
+
+
+============================== 13:01:03.345574 | 6d7b9461-3096-477d-80d2-85a889a146c7 ==============================
+[0m13:01:03.345574 [info ] [MainThread]: Running with dbt=1.11.9
+[0m13:01:03.346569 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\renan\\Desktop\\Projetos-Github\\Data-Warehouse', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:07:16.106935 [info ] [MainThread]: A project called datawarehouse already exists here.
+[0m13:07:16.109558 [debug] [MainThread]: Command `python -m dbt.cli.main init` succeeded at 13:07:16.108486 after 372.94 seconds
+[0m13:07:16.109558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239B2E8D7C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239B49267E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239B339D490>]}
+[0m13:07:16.109558 [debug] [MainThread]: Flushing usage events
+[0m13:07:16.970284 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:24:38.126582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123FA59A7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123FCD06D80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123FCD06F00>]}
+
+
+============================== 14:24:38.132122 | 42000a5f-ea10-4a3b-91d1-b5530fb823d1 ==============================
+[0m14:24:38.132122 [info ] [MainThread]: Running with dbt=1.11.9
+[0m14:24:38.132122 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\renan\\Desktop\\Projetos-Github\\Data-Warehouse', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:24:38.165130 [info ] [MainThread]: dbt version: 1.11.9
+[0m14:24:38.166132 [info ] [MainThread]: python version: 3.12.7
+[0m14:24:38.167130 [info ] [MainThread]: python path: C:\Users\renan\Desktop\Projetos-Github\Data-Warehouse\.venv\Scripts\python.exe
+[0m14:24:38.168135 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m14:24:38.176675 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DB_HOST_PROD'
+[0m14:24:38.177678 [debug] [MainThread]: Command `python -m dbt.cli.main debug` failed at 14:24:38.177678 after 0.27 seconds
+[0m14:24:38.178674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123FA59A7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123FED87920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123FECEE450>]}
+[0m14:24:38.178674 [debug] [MainThread]: Flushing usage events
+[0m14:24:39.166056 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:21:29.553047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA1FA7E930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA1F2C3170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA1F2C3080>]}
+
+
+============================== 17:21:29.558052 | 52e6b56e-a018-4b92-a502-c12c814515db ==============================
+[0m17:21:29.558052 [info ] [MainThread]: Running with dbt=1.11.9
+[0m17:21:29.559052 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '../', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:21:29.559052 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\renan\Desktop\Projetos-Github\Data-Warehouse\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:21:29.560053 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 17:21:29.560053 after 0.17 seconds
+[0m17:21:29.561055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA211E6A20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA1FA7E930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EA2122BF20>]}
+[0m17:21:29.561055 [debug] [MainThread]: Flushing usage events
+[0m17:21:30.493578 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: dbsales_0rjb
+    schema: public
+    tables:
+      - name: commodities
+        description: "Tabela que contém dados históricos de commodities"
+        columns:
+          - name: Date
+            description: "Data da observação"
+            tests:
+              - not_null
+          - name: Close
+            description: "Preço de fechamento da commodity"
+            tests:
+              - not_null
+          - name: simbolo
+            description: "Símbolo da commodity"
+            tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['CL=F', 'GC=F', 'SI=F', 'NG=F', 'HG=F']
+
+      - name: movimentacao_commodities
+        description: "Tabela que contém dados de movimentação de commodities"
+        columns:
+          - name: date
+            description: "Data da transação"
+            tests:
+              - not_null
+          - name: symbol
+            description: "Símbolo da commodity"
+            tests:
+              - not_null
+          - name: action
+            description: "Tipo de transação (buy/sell)"
+            tests:
+              - not_null
+          - name: quantity
+            description: "Quantidade transacionada"
+            tests:
+              - not_null

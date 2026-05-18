@@ -1,6 +1,5 @@
 datawarehouse:
   target: dev
-
   outputs:
     dev:
       type: postgres
@@ -12,3 +11,4 @@ datawarehouse:
       schema: "{{ env_var('DB_SCHEMA_PROD') }}"
       threads: "{{ env_var('DB_THREADS_PROD') | int }}"
       keepalives_idle: 0
+      sslmode: require

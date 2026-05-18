@@ -1,0 +1,46 @@
+name: dbt CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  dbt:
+    runs-on: ubuntu-latest
+    env:
+      DB_HOST_PROD: ${{ secrets.DB_HOST_PROD }}
+      DB_PORT_PROD: ${{ secrets.DB_PORT_PROD }}
+      DB_NAME_PROD: ${{ secrets.DB_NAME_PROD }}
+      DB_USER_PROD: ${{ secrets.DB_USER_PROD }}
+      DB_PASS_PROD: ${{ secrets.DB_PASS_PROD }}
+      DB_SCHEMA_PROD: ${{ secrets.DB_SCHEMA_PROD }}
+      DB_THREADS_PROD: 4
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dbt
+        run: pip install dbt-postgres
+
+      - name: dbt debug
+        working-directory: datawarehouse
+        run: dbt debug --profiles-dir ..
+
+      - name: dbt seed
+        working-directory: datawarehouse
+        run: dbt seed --profiles-dir ..
+
+      - name: dbt run
+        working-directory: datawarehouse
+        run: dbt run --profiles-dir ..
+
+      - name: dbt test
+        working-directory: datawarehouse
+        run: dbt test --profiles-dir ..

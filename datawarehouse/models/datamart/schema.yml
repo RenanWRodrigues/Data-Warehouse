@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dm_commodities
+    description: "Datamart para dados de commodities integrados com movimentações"
+    columns:
+      - name: data
+        description: "Data da observação"
+        tests:
+          - not_null
+      - name: simbolo
+        description: "Símbolo da commodity"
+        tests:
+          - not_null
+      - name: valor_fechamento
+        description: "Preço de fechamento da commodity"
+        tests:
+          - not_null
+      - name: acao
+        description: "Tipo de transação (buy/sell)"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['buy', 'sell']
+      - name: quantidade
+        description: "Quantidade transacionada"
+        tests:
+          - not_null
+      - name: valor
+        description: "Valor da transação (quantidade * valor_fechamento)"
+        tests:
+          - not_null
+      - name: ganho
+        description: "Ganho ou perda da transação"
+        tests:
+          - not_null

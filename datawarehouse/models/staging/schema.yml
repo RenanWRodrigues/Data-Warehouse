@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_commodities
+    description: "Tabela de staging para dados de commodities"
+    columns:
+      - name: data
+        description: "Data da observação no formato AAAA-MM-DD"
+        tests:
+          - not_null
+      - name: valor_fechamento
+        description: "Preço de fechamento da commodity"
+        tests:
+          - not_null
+      - name: simbolo
+        description: "Símbolo da commodity"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['CL=F', 'GC=F', 'SI=F', 'NG=F', 'HG=F']
+
+  - name: stg_movimentacao_commodities
+    description: "Tabela de staging para dados de movimentação de commodities"
+    columns:
+      - name: data
+        description: "Data da transação no formato AAAA-MM-DD"
+        tests:
+          - not_null
+      - name: simbolo
+        description: "Símbolo da commodity"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['CL=F', 'GC=F', 'SI=F', 'NG=F', 'HG=F']
+      - name: acao
+        description: "Tipo de transação (buy/sell)"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['buy', 'sell']
+      - name: quantidade
+        description: "Quantidade transacionada"
+        tests:
+          - not_null
