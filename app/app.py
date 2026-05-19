@@ -49,6 +49,11 @@ DB_SCHEMA = _get_secret("DB_SCHEMA_PROD")
 # VALIDAÇÃO DAS VARIÁVEIS
 # =========================================================
 
+try:
+    st.write("🔍 DEBUG - Chaves em st.secrets:", list(st.secrets.keys()))
+except Exception as e:
+    st.write(f"🔍 DEBUG - st.secrets inacessível: {type(e).__name__}: {e}")
+
 required_vars = {
     'DB_HOST_PROD': DB_HOST,
     'DB_PORT_PROD': DB_PORT,
