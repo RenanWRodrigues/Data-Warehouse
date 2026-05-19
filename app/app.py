@@ -1,3 +1,5 @@
+# Importa as bibliotecas necessárias
+
 import os
 from pathlib import Path
 import pandas as pd
@@ -29,14 +31,17 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 # - Streamlit Cloud (Secrets)
 # =========================================================
 
+
 def _get_secret(key: str) -> str | None:
     try:
         return st.secrets[key]
     except KeyError:
         return os.getenv(key)
     except Exception as e:
-        st.warning(f"Erro ao acessar st.secrets['{key}']: {type(e).__name__}: {e}")
+        st.warning(
+            f"Erro ao acessar st.secrets['{key}']: {type(e).__name__}: {e}")
         return os.getenv(key)
+
 
 DB_HOST = _get_secret("DB_HOST_PROD")
 DB_PORT = _get_secret("DB_PORT_PROD")
