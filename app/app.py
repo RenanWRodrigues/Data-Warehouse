@@ -29,23 +29,18 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 # - Streamlit Cloud (Secrets)
 # =========================================================
 
-try:
-    # STREAMLIT CLOUD
-    DB_HOST = st.secrets["DB_HOST_PROD"]
-    DB_PORT = st.secrets["DB_PORT_PROD"]
-    DB_NAME = st.secrets["DB_NAME_PROD"]
-    DB_USER = st.secrets["DB_USER_PROD"]
-    DB_PASS = st.secrets["DB_PASS_PROD"]
-    DB_SCHEMA = st.secrets["DB_SCHEMA_PROD"]
+def _get_secret(key: str) -> str | None:
+    try:
+        return st.secrets[key]
+    except Exception:
+        return os.getenv(key)
 
-except Exception:
-    # AMBIENTE LOCAL (.env)
-    DB_HOST = os.getenv("DB_HOST_PROD")
-    DB_PORT = os.getenv("DB_PORT_PROD")
-    DB_NAME = os.getenv("DB_NAME_PROD")
-    DB_USER = os.getenv("DB_USER_PROD")
-    DB_PASS = os.getenv("DB_PASS_PROD")
-    DB_SCHEMA = os.getenv("DB_SCHEMA_PROD")
+DB_HOST = _get_secret("DB_HOST_PROD")
+DB_PORT = _get_secret("DB_PORT_PROD")
+DB_NAME = _get_secret("DB_NAME_PROD")
+DB_USER = _get_secret("DB_USER_PROD")
+DB_PASS = _get_secret("DB_PASS_PROD")
+DB_SCHEMA = _get_secret("DB_SCHEMA_PROD")
 
 # =========================================================
 # VALIDAÇÃO DAS VARIÁVEIS
