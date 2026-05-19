@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import pandas as pd
 import streamlit as st
 from sqlalchemy import create_engine
@@ -19,7 +20,7 @@ st.title('📈 Dashboard de Commodities')
 # CARREGA VARIÁVEIS DE AMBIENTE
 # =========================================================
 
-load_dotenv()
+load_dotenv(Path(__file__).parent.parent / ".env")
 
 # =========================================================
 # VARIÁVEIS DE AMBIENTE
